@@ -4,7 +4,8 @@ import sqlite3
 import pandas as pd
 import numpy as np
 
-st.set_page_config(page_title="Плант Бокс - технологии возделывания лекарственных", page_icon="/images/flavicon.ico")
+st.set_page_config(page_title="Плант Бокс - технологии возделывания лекарственных",
+                   page_icon="/images/favicon.ico")
 
 custom_css = """<style>
                     .championship-tab-company {
@@ -73,28 +74,23 @@ with st.sidebar:
                         help="Выбирете (введите) наименование растения",
                         ) #label_visibility="hidden"
 
-cursor.execute(f"""SELECT region_name, book_name, book_year, book_web
+cursor.execute("""SELECT region_name, plant_ru_name, plant_lat_name, book_name, book_year, book_web
                   FROM regions
                   INNER JOIN books USING(region_id)
-                  WHERE region_name IN ({','.join(['?']*len(region_options))});""", region_options)
+                  INNER JOIN redbooks USING(book_id)
+                  INNER JOIN plant_ru USING(plant_ru_id)
+                  INNER JOIN plant_lat USING(plant_lat_id);""")
 
 plants_data = cursor.fetchall()
-colnames = ["Наименование региона", "Наименование книги (источник)", "Год книги", "Веб сайт книги"]
-books_df = pd.DataFrame(data=plants_data, columns=colnames)
-books_df["Год книги"] = books_df["Год книги"].fillna("-  ").astype("str").apply(lambda x: x[:-2])
+#colnames = ["Наименование региона", "Название растения RU",
+#            "Название растения LAT", "Наименование книги (источник)",
+#           "Год книги", "Веб сайт книги"]
+books_df = pd.DataFrame(data=plants_data) #, columns=colnames
+#books_df["Год книги"] = books_df["Год книги"].fillna("-  ").astype("str").apply(lambda x: x[:-2])
 
-st.write("Список красных книг")
+st.write("Список растений в красных книгах")
 
-st.write(books_df[:10])
-
-cursor.execute(f"""SELECT plant_ru_name
-                  FROM plant_ru
-                  WHERE plant_ru_name IN ({','.join(['?']*len(plant_ru_options))});""", plant_ru_options)
-plant_ru_data = cursor.fetchall()
-colnames = ["Наименование растения"]
-plant_ru_df = pd.DataFrame(data=plant_ru_data, columns=colnames)
-
-st.write(plant_ru_df)
+st.write(books_df[:20])
 
 st.write("##")
 st.markdown("<h5 style='text-align: center; color: blac;'> ©️ Команда Extreme DS </h5>", unsafe_allow_html=True)
