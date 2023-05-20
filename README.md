@@ -7,7 +7,7 @@
 Кейс №3 "ИИ помогает фермерам ООО "СОЛЮШН""
 
 1. [Презентация](https://github.com/RuslanLat/green/blob/main/presentation.pdf)
-2. [WEB-приложение](https://green.streamlit.app/)
+2. [WEB-приложение](https://greens.streamlit.app/)
 
 ![web](https://github.com/RuslanLat/green/blob/main/images/web.gif)
 
