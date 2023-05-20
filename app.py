@@ -82,15 +82,17 @@ cursor.execute("""SELECT region_name, plant_ru_name, plant_lat_name, book_name, 
                   INNER JOIN plant_lat USING(plant_lat_id);""")
 
 plants_data = cursor.fetchall()
-#colnames = ["Наименование региона", "Название растения RU",
-#            "Название растения LAT", "Наименование книги (источник)",
-#           "Год книги", "Веб сайт книги"]
-books_df = pd.DataFrame(data=plants_data) #, columns=colnames
+colnames = ["Наименование региона", "Название растения RU",
+            "Название растения LAT", "Наименование книги (источник)",
+           "Год книги", "Веб сайт книги"]
+books_df = pd.DataFrame(data=plants_data, columns=colnames) #, columns=colnames
 #books_df["Год книги"] = books_df["Год книги"].fillna("-  ").astype("str").apply(lambda x: x[:-2])
 
 st.write("Список растений в красных книгах")
 
 st.write(books_df[:20])
+
+connection.close()
 
 st.write("##")
 st.markdown("<h5 style='text-align: center; color: blac;'> ©️ Команда Extreme DS </h5>", unsafe_allow_html=True)
