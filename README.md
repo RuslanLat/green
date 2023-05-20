@@ -14,8 +14,9 @@
 Для локального использования WEB-приложения:
 1. Загрузить все файлы репозитория [**green**](https://github.com/RuslanLat/green) \
     или выполнить команду "git clone https://github.com/RuslanLat/green"
-2. Установить [зависимости](https://github.com/RuslanLat/green/blob/main/requirements.txt)
-3. В терминале выполнить команду \
+2. Установить библиотеку  streamlit (выполнить команду в терминале "pip install streamlit")  
+3. Установить [зависимости](https://github.com/RuslanLat/green/blob/main/requirements.txt)
+4. В терминале выполнить команду \
     streamlit run app.py \
     или (если выдает ошибку) \
     streamlit run app.py --server.port 5998 

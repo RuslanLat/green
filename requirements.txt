@@ -1,3 +1,5 @@
 streamlit_option_menu
+streamlit-aggrid
+gspread
 beautifulsoup4
 lxml
