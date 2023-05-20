@@ -12,7 +12,7 @@
 ![web](https://github.com/RuslanLat/green/blob/main/images/web.gif)
 
 Для локального использования WEB-приложения:
-1. Загрузить все файлы репозитория **green** \
+1. Загрузить все файлы репозитория [**green**](https://github.com/RuslanLat/green) \
     или выполнить команду "git clone https://github.com/RuslanLat/green"
 2. Установить [зависимости](https://github.com/RuslanLat/green/blob/main/requirements.txt)
 3. В терминале выполнить команду \
@@ -23,7 +23,7 @@
 
 Команда **"Extreme DS"** \
 Руслан Латипов (капитан) <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @rus_lat116 \
-Алексей Верт-Миллер <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @alexwert3
-Юрий Дон <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @Yuriy_Nikitich
-Виталий Ерохин <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @warleagle
+Алексей Верт-Миллер <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @alexwert3 \
+Юрий Дон <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @Yuriy_Nikitich \
+Виталий Ерохин <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @warleagle \
 Кирилл Ерохин <img src="https://github.com/RuslanLat/green/blob/main/images/telegram_icon.png" width="15"> @Kasdeja23
