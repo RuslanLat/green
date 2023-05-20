@@ -1,0 +1,4 @@
+treamlit_option_menu
+beautifulsoup4
+streamlit
+lxml
