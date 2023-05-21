@@ -65,7 +65,7 @@ if selected == "Красные книги":
     st.subheader("Введите (выбирете) наименование региона")
 
     select_option = st.selectbox('', region_names,
-                                help="Введите (выбирете) наименование региона", index=12)
+                                help="Введите (выбирете) наименование региона", index=2)
 
     cursor.execute("""SELECT plant_ru_name, plant_lat_name, book_name, book_year, book_web
                         FROM regions
